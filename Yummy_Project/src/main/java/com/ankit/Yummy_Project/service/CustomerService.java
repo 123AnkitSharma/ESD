@@ -23,6 +23,8 @@ public class CustomerService {
     private final CustomerMapper customerMapper;
     private final EncryptionService encryptionService;
     private final JWTHelper jwtHelper;
+
+
     public String createCustomer(CustomerRequest request) {
         Customer customer = customerMapper.toCustomer(request);
         customer.setPassword(encryptionService.encode(customer.getPassword()));

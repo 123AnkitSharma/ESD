@@ -2,7 +2,6 @@ package com.ankit.Yummy_Project.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.*;
-import lombok.Data;
 
 public record LoginRequest(
         @NotNull(message="Customer email is required")
